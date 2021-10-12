@@ -102,14 +102,16 @@ class _GButtonState extends State<GButton> {
         iconActiveColor: widget.iconActiveColor,
         iconColor: widget.iconColor,
         icon: widget.icon,
-        text: Text(
-          widget.text,
-          style: widget.textStyle ??
-              TextStyle(
-                fontWeight: FontWeight.w600,
-                color: widget.textColor,
-              ),
-        ),
+        text: widget.text != ''
+            ? Text(
+                widget.text,
+                style: widget.textStyle ??
+                    TextStyle(
+                      fontWeight: FontWeight.w600,
+                      color: widget.textColor,
+                    ),
+              )
+            : null,
       ),
     );
   }
